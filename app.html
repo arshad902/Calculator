@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .special{
+    padding: 6rem 0;
+    background: rgb(235, 235, 235);
+}
+.special .countdown-container h2{
+    color: var(--bg-danger);
+    letter-spacing: 1px;
+}
+.special .countdown-container{
+    padding-top: 4.375rem;
+}
+.special .countdown-container p{
+    color: var(--bg-danger);
+    font-weight: 300;
+    letter-spacing: 3px;
+
+}
+.special .countdown-container .countdown-counter{
+    display: block;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1.875rem;
+    margin-top: 3rem;
+}
+.special .countdown-container .countdown-counter li{
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    background: white;
+    color: var(--bg-danger);
+    border-radius: 0.313rem;
+    padding: 2rem 1rem;
+    width: 15%;
+    margin: 0 0.313rem;
+}
+.sale-price{
+    font-size: 1.7rem;
+    color: var(--bg-danger);
+}
+.sale-price > del{
+    font-size: 1.3rem;
+    color: var(--text-gray);
+}
+.special .special-img span{
+    background-color: var(--bg-danger);
+    color: aliceblue;
+    border-radius: 0.313rem;
+    font-size: 0.813rem;
+    line-height: 1.663rem;
+    padding: 0.225rem 0.813rem;
+    text-transform: uppercase;
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    z-index: 99;
+}
+
+    </style>
+</head>
+<body>
+   
+      <script>
+        var currentDate = new Date();  /// date object
+// currentDate.setFullYear(2015)
+// currentDate.setMonth(0)
+
+console.log(currentDate);
+
+document.write(currentDate)
+
+
+
+console.log(currentDate.getMonth());
+console.log(currentDate.getDay());
+console.log(currentDate.getDate());
+console.log(currentDate.getHours());
+console.log(currentDate.getMilliseconds());
+console.log(currentDate.getTime());
+
+
+var futureDate = new Date("June 14, 2050 17:40:20");
+console.log(futureDate)
+
+console.log(futureDate.getFullYear() - currentDate.getFullYear() )
+
+
+/// days
+
+var miliSecDifference = futureDate.getTime() - currentDate.getTime();
+console.log(miliSecDifference);
+
+
+// units
+/// miliSec -> sec
+
+var result = miliSecDifference / 1000 ;
+/// Sec -> mins
+result = result / 60
+
+/// mins -> hrs
+result = result / 60;
+
+/// hrs -> days
+result = result / 24;
+// var result = miliSecDifference / (1000 * 60 * 60 * 24)
+
+
+console.log(Math.floor(result));
+      </script> 
+</body>
+</html>
